@@ -1,121 +1,107 @@
-🏢 Reliance Store Management App
-💻 Developed using C# & WinForms
+# 🏢 Reliance Store Management App
+### 💻 Developed using C# & WinForms
 
-🚀 A Windows Desktop Application built using C# and Windows Forms (WinForms) that simulates a product-based store system with categorized search, services information, and company details.
+![Language](https://img.shields.io/badge/Language-C%23-blue?logo=csharp)
+![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey?logo=windows)
+![IDE](https://img.shields.io/badge/IDE-Visual%20Studio-purple?logo=visualstudio)
 
-📌 📖 Project Description
+> 🚀 A Windows Desktop Application built using **C#** and **Windows Forms (WinForms)** that simulates a product-based store system with categorized search, services information, and company details.
 
-Reliance Store Management App is designed to provide a smooth desktop experience for managing and browsing products.
-The application includes category-based optimized search, company policies, and navigation across multiple pages.
+---
 
-🛠️ 🧰 Tech Stack
+## 📖 Project Description
 
-💻 C#
+**Reliance Store Management App** is designed to provide a smooth desktop experience for managing and browsing products.  
+The application includes category-based optimized search, company policies, and easy navigation across multiple pages.
 
-🪟 Windows Forms (WinForms)
+---
 
-🗄️ ADO.NET
+## 🧰 Tech Stack
 
-🛢️ SQL Server
+| Technology | Purpose |
+|---|---|
+| 💻 C# | Core programming language |
+| 🪟 Windows Forms (WinForms) | UI Framework |
+| 🗄️ ADO.NET | Database connectivity |
+| 🛢️ SQL Server | Database |
 
-✨ 🚀 Features
-🏠 Home Page
+---
 
-📄 Application description
+## ✨ Features
 
-🔗 Navigation links to other pages
+### 🏠 Home Page
+- 📄 Application description
+- 🔗 Navigation links to other pages
+- 📊 Dashboard-style interface
 
-📊 Dashboard-style interface
+![Home Page](500.png)
 
-🛍️ Products Page
+### 🛍️ Products Page
+- 📦 Displays product details:
+  - Product ID
+  - Product Name
+  - Description
+  - Price
+  - Category
+- ⚡ Dynamic data loading from database
 
-📦 Displays:
+![Products Page](502.png)
 
-Product ID
+### 🔎 Category Optimized Search
+- 🔎 **Category Optimized Search** (Single Query)
+- 📂 Available Categories:
+  - 💻 Laptop
+  - 📱 Mobile
+  - 🎵 Music
 
-Product Name
+![Category Search](501.png)
 
-Description
+### 🧾 Bill
+- 🧾 Auto-generated billing for selected products
+- 💰 Displays itemized product costs and total amount
 
-Price
+![Bill](504.png)
 
-Category
+### 🛠️ Services Page
+- 📜 Store policies
+- 🔄 Return & refund policy
+- 📋 Terms and conditions
+- 🤝 Customer guidelines
 
-🔎 Category Optimized Search (Single Query)
+![Services Page](507.png)
 
-📂 Available Categories:
+### 📞 Contact Page
+- 📧 Email details
+- ☎️ Support information
+- 📍 Company contact details
 
-💻 Laptop
+![Contact Page](506-Contact.png)
 
-📱 Mobile
+### ℹ️ About Us Page
+- 🏢 Company background
+- 🎯 Mission & Vision
+- 🌟 Organizational values
 
-🎵 Music
+![About Us Page](505-About.png)
 
-⚡ Dynamic data loading from database
+---
 
-🛠️ Services Page
+## 📊 Database Schema
 
-📜 Store policies
+### Table: `Product`
 
-🔄 Return & refund policy
+| Column | Type | Constraint |
+|---|---|---|
+| `pid` | int | Primary Key |
+| `pname` | varchar | — |
+| `pdesc` | varchar | — |
+| `price` | decimal | — |
+| `category` | varchar | — |
 
-📋 Terms and conditions
+---
 
-🤝 Customer guidelines
+## 💡 Optimized Category Search Query
 
-📞 Contact Page
-
-📧 Email details
-
-☎️ Support information
-
-📍 Company contact details
-
-ℹ️ About Us Page
-
-🏢 Company background
-
-🎯 Mission & Vision
-
-🌟 Organizational values
-
-🗂️ 📊 Database Schema
-
-Table: Product
-
-pid (int, Primary Key)
-
-pname (varchar)
-
-pdesc (varchar)
-
-price (decimal)
-
-category (varchar)
-
-🔍 💡 Optimized Category Search Query
-
+```sql
 SELECT * FROM Product
 WHERE (@category IS NULL OR category = @category);
-
-✔ Uses a single query for dynamic category filtering
-✔ Efficient and clean database handling
-
-🎯 🌟 Key Highlights
-
-✔ Clean WinForms UI Design
-✔ Optimized database queries
-✔ Simple navigation between forms
-✔ Structured and maintainable code
-✔ Beginner-friendly architecture
-
-▶️ 🚀 How to Run
-
-1️⃣ Clone the repository
-git clone https://github.com/mosin-23/reliance-winforms-app.git
-
-2️⃣ Open in Visual Studio
-
-3️⃣ Configure SQL Server connection string
-
-4️⃣ Run the application
