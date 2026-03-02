@@ -112,7 +112,7 @@ WHERE (@category IS NULL OR category = @category);
 ▶️ 🚀 How to Run
 
 1️⃣ Clone the repository
-git clone https://github.com/your-username/reliance-winforms-app.git
+git clone https://github.com/mosin-23/reliance-winforms-app.git
 
 2️⃣ Open in Visual Studio
 
